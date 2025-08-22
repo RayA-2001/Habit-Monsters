@@ -261,7 +261,7 @@ export default function App() {
 
   const addHabit = (data: Pick<Habit, "name" | "category">) => {
     const newHabit: Habit = {
-      id: crypto.randomUUID(),
+      id: Math.random().toString(36).substring(2, 9),,
       name: data.name,
       category: data.category,
       createdAt: new Date().toISOString(),
